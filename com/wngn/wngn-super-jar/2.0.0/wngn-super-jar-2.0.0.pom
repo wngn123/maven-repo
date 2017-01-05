@@ -332,18 +332,6 @@
                         <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
                     </configuration>
                 </plugin>
-                <!-- 项目APIdoc报告 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.10.4</version>
-                    <configuration>
-                        <encoding>UTF-8</encoding>
-                        <show>private</show>
-                        <nohelp>true</nohelp>
-                        <additionalparam>-Xdoclint:none</additionalparam>
-                    </configuration>
-                </plugin>
                 <!-- 项目源代码报告 -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -391,6 +379,53 @@
                     <groupId>maven</groupId>
                     <artifactId>maven-changelog-plugin</artifactId>
                     <version>1.9.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.10.4</version>
+                    <configuration>
+                        <charset>UTF-8</charset>
+                        <encoding>UTF-8</encoding>
+                        <docencoding>UTF-8</docencoding>
+                        <tags>
+                            <tag>
+                                <name>author</name>
+                                <placement>a</placement>
+                                <head>Author</head>
+                            </tag>
+                            <tag>
+                                <name>email</name>
+                                <placement>a</placement>
+                                <head>Email</head>
+                            </tag>
+                            <tag>
+                                <name>title</name>
+                                <placement>a</placement>
+                                <head>Title</head>
+                            </tag>
+                            <tag>
+                                <name>date</name>
+                                <placement>a</placement>
+                                <head>Date</head>
+                            </tag>
+                            <tag>
+                                <name>desc</name>
+                                <placement>a</placement>
+                                <head>Desc</head>
+                            </tag>
+                            <tag>
+                                <name>descripe</name>
+                                <placement>a</placement>
+                                <head>Descripe</head>
+                            </tag>
+                            <tag>
+                                <name>version</name>
+                                <placement>a</placement>
+                                <head>Version</head>
+                            </tag>
+                        </tags>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
